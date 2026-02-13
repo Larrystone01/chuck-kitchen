@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-inter: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter);
+}
+
+.hero-section {
+  background-image: url("/images/hero-image.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.pre-footer {
+  position: relative;
+  background-image: url("/images/prefooter.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.footer-logo {
+  font-family: var(--font-island-moments);
+}
+
+.footer-headings {
+  font-family: var(--font-jost);
+}
+
+.footer-body {
+  font-family: var(--font-poppins);
+}
