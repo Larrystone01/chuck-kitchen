@@ -17,7 +17,7 @@ export default function Navbar() {
             <Image src="/images/logo.png" alt="Logo" width={183} height={41} />
           </Link>
           <div
-            className={`nav-links-login flex flex-col md:flex-row items-center md:w-2/3 px-4 md:px-0 pt-16 md:pt-0 inset-0 bg-white md:bg-none md:justify-between md:opacity-100 md:static md:translate-x-0 absolute transition-all duration-300 ease-in-out ${NavbarOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`}
+            className={`nav-links-login flex flex-col md:flex-row items-center md:w-2/3 px-4 md:px-0 pt-16 md:pt-0 inset-0 h-screen md:h-fit bg-white md:bg-none md:justify-between md:opacity-100 md:static md:translate-x-0 absolute transition-all duration-300 ease-in-out ${NavbarOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`}
           >
             <button
               onClick={() => setNavbarOpen(false)}

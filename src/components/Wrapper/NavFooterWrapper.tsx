@@ -10,7 +10,7 @@ export default function NavWrapper({ children }: NavWrapperProps) {
   return (
     <>
       <Navbar />
-      <main className="pt-22">{children}</main>
+      <main className="pt-19.5">{children}</main>
       <Footer />
     </>
   );

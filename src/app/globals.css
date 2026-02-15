@@ -20,12 +20,19 @@
 }
 
 body {
-  background: var(--background);
+  /* background: var(--background); */
+  background: #f3f4f6;
   color: var(--foreground);
   font-family: var(--font-inter);
 }
 
 .hero-section {
+  background-image: url("/images/hero-background.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.explore-page {
   background-image: url("/images/hero-image.jpg");
   background-size: cover;
   background-position: center;
