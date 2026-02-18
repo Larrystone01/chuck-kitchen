@@ -1,7 +1,6 @@
 "use client";
 import useShowMore from "@/hooks/useShowMore";
 import Card from "./Card";
-import { title } from "process";
 
 type CardDisplayGridProps = {
   DisplayItem: any[];
@@ -22,6 +21,22 @@ export default function CardDisplayGrid({
     limit,
     items: DisplayItem,
   });
+
+    const slugFromName = (DisplayItem: any[]) => {
+    return DisplayItem.map((item: { name: string }) => {
+      return {
+        ...item,
+        slug: item?.name
+          .toLowerCase()
+          .trim()
+          .replace(/[^a-z0-9\s-]/g, "")
+          .replace(/\s+/g, "-")
+          .replace(/-+/g, "-"),
+      };
+    });
+  };
+
+  const slug = slugFromName(DisplayItem);
   return (
     <section className="chefs-special-section py-15 md:py-0 md:pb-40">
       <div className="container mx-auto px-6">
@@ -41,6 +56,7 @@ export default function CardDisplayGrid({
                   showAll={showAll}
                   limit={limit}
                   buttonText={buttonText}
+                  href={slug[i]?.slug}
                 />
               );
             })}

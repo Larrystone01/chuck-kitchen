@@ -103,3 +103,9 @@ export const SwallowItems = [
     img: "/images/fuff.png",
   },
 ];
+
+export const AllFoods = [
+  ...PopularCategoryItems,
+  ...JollofCategoryItems,
+  ...SwallowItems,
+];

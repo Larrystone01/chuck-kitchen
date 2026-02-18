@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { Plus } from "lucide-react";
+import Link from "next/link";
 
 type CardProps = {
   items: any;
@@ -8,6 +9,7 @@ type CardProps = {
   index: number;
   limit: number;
   showAll: any;
+  href: string;
 };
 
 export default function Card({
@@ -16,9 +18,11 @@ export default function Card({
   index,
   limit,
   showAll,
+  href,
 }: CardProps) {
   return (
-    <div
+    <Link
+      href={`/${href}`}
       key={items.id}
       className={`shadow-lg rounded-b-[14px] ${!showAll && index >= limit ? "hidden sm:block" : ""}`}
     >
@@ -42,6 +46,6 @@ export default function Card({
           {buttonText ? buttonText : <Plus size={20} />}
         </button>
       </div>
-    </div>
+    </Link>
   );
 }
